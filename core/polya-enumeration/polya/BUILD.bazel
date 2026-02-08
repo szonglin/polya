@@ -1,0 +1,23 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "polya",
+    hdrs = [
+        "Polya.hh",
+    ],
+    srcs = [
+        "Polya.cc",
+    ],
+    deps = [
+        "//core/polya-enumeration/group",
+        "//core/polya-enumeration/orbit-counting",
+        "//core/polya-enumeration/polynomial",
+        "//core/polya-enumeration/rational",
+        "//core/util",
+    ],
+    implementation_deps = [
+        "//core/util:power",
+        "@range-v3//:range-v3",
+    ],
+    visibility = ["//visibility:public"],
+)

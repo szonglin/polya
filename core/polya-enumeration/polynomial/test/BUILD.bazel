@@ -1,0 +1,13 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+cc_test(
+    name = "test",
+    srcs = [
+        "PolynomialTest.cc",
+    ],
+    deps = [
+        "//core/polya-enumeration/polynomial",
+        "//core/polya-enumeration/rational",
+        "@googletest//:gtest_main",
+    ],
+)

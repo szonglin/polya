@@ -1,0 +1,21 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "util",
+    hdrs = [
+        "Exception.hh",
+        "Type.hh",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "power",
+    hdrs = [
+        "Power.hh",
+    ],
+    deps = [
+        "//core/util"
+    ],
+    visibility = ["//visibility:public"],
+)

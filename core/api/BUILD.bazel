@@ -1,0 +1,14 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "api",
+    hdrs = [
+        "Polya.hh",
+    ],
+    deps = [
+        "//core/polya-enumeration/orbit-counting",
+        "//core/polya-enumeration/polya",
+        "//core/polya-enumeration/polynomial",
+    ],
+    visibility = ["//visibility:public"],
+)

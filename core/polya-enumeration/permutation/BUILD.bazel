@@ -1,0 +1,18 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "permutation",
+    hdrs = [
+        "Permutation.hh",
+    ],
+    srcs = [
+        "Permutation.cc",
+    ],
+    deps = [
+        "//core/util",
+    ],
+    implementation_deps = [
+        "@range-v3//:range-v3",
+    ],
+    visibility = ["//visibility:public"],
+)
